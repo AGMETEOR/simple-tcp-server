@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - simpletcp.stcp.com
+  resources:
+  - simpletcpservers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - simpletcp.stcp.com
+  resources:
+  - simpletcpservers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - simpletcp.stcp.com
+  resources:
+  - simpletcpservers/status
+  verbs:
+  - get
+  - patch
+  - update
