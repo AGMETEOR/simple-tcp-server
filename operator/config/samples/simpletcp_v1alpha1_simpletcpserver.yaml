@@ -9,4 +9,5 @@ metadata:
     app.kubernetes.io/created-by: operator
   name: simpletcpserver-sample
 spec:
-  # TODO(user): Add fields here
+  serverInstances: 3
+  containerPort: 8083

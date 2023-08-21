@@ -12,7 +12,7 @@ import (
 
 const (
 	HOST               = "localhost"
-	PORT               = ":8080"
+	PORT               = ":8083"
 	TRANSPORT_PROTOCOL = "tcp"
 )
 

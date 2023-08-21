@@ -18,6 +18,7 @@ package controllers
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/go-logr/logr"
@@ -64,7 +65,8 @@ func (r *SimpleTCPServerReconciler) Reconcile(ctx context.Context, req ctrl.Requ
 	}
 	log.WithValues("serverVersion", server.APIVersion, "generation", server.Generation)
 
-	return ctrl.Result{RequeueAfter: 1 * time.Minute}, nil
+	fmt.Println("Running instead of the logger")
+	return ctrl.Result{RequeueAfter: 30 * time.Second}, nil
 }
 
 // SetupWithManager sets up the controller with the Manager.

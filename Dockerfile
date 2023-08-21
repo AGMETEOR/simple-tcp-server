@@ -15,7 +15,7 @@ WORKDIR /
 
 COPY --from=build-stage /simple-tcp-server /simple-tcp-server
 
-EXPOSE 8080/tcp
+EXPOSE 8083/tcp
 
 USER nonroot:nonroot
 
